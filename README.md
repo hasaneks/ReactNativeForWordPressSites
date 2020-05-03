@@ -1,5 +1,5 @@
 # React Native For WordPress Sites
- Thanks to Obsioo developed with React Native, you can easily convert your WordPress site to native mobile application for both Android and iOS.
+ Thanks to **Obsioo** developed with React Native, you can easily convert your WordPress site to native mobile application for both Android and iOS.
 
 #### Promotional Video
 [![Promotional Video](https://i.ytimg.com/vi/TYAIC1_7Edk/hqdefault.jpg)](https://www.youtube.com/watch?v=TYAIC1_7Edk)
@@ -9,11 +9,11 @@
 
 ```
 1) To change the website where the application will run;
-You must update the url in **/src/config/index.js**
-2) To update the texts where the application;**
-You must update the texts in **/src/config/language.js**
+You must update the url in /src/config/index.js 
+2) To update the texts where the application;
+You must update the texts in /src/config/language.js
 3) To change color palettes where the application;
-You must update the colors in **/src/config/language.js**
+You must update the colors in /src/config/language.js
 ```
 It was used Mobx (state management), React Navigation and Oxios where the project.
 
