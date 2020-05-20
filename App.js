@@ -11,7 +11,7 @@ import {
 import PostView from './src/views/PostViews/PostView';
 import PostDetail from './src/views/PostDetail/PostDetail';
 import SearchView from './src/views/Search/Search';
-import CategoryList from './src/views/Category/CategoryList/CategoryList'
+import CategoryList from './src/views/Category/CategoryList/CategoryList';
 import CategoryView from './src/views/Category/CategoryView/CategoryView';
 //React Navigation
 import 'react-native-gesture-handler';
@@ -114,8 +114,8 @@ export default class App extends Component {
         <NavigationContainer>
           <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
             <Tab.Screen name="Home" component={HomeStackScreen} />
-            <Tab.Screen name="Search" component={SearchStackScreen} />
-            <Tab.Screen name="Category" component={CategoryStackScreen} />
+            <Tab.Screen name="Search" component={SearchStackScreen}/>
+            <Tab.Screen name="Category" component={CategoryStackScreen}/>
           </Tab.Navigator>
         </NavigationContainer>
       </Provider>

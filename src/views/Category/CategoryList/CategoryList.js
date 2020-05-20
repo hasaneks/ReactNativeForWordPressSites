@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native'
+import { Text, View, SafeAreaView, FlatList, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native'
 //Mobx Store
 import { observer } from 'mobx-react';
 import CategoryStore from '../../../store/CategoryStore';
@@ -49,14 +49,13 @@ export default class CategoryList extends Component {
     }
 
     goToCategoryList = (item) => {
-        this.props.navigation.navigate('Category View',
-            CategoryStore.getCategoryPosts(item.item.id)
-        );
+        CategoryStore.getCategoryPosts(item.item.id)
+        this.props.navigation.navigate('Category View');
     }
 
     render() {
         return (
-            <View>
+            <SafeAreaView>
                 <FlatList
                     style={styles.categoryList}
                     renderItem={this.renderCategoryItem}
@@ -67,7 +66,7 @@ export default class CategoryList extends Component {
                     onEndReached={this.getMoreCategory}
                     onEndReachedThreshold={10}
                 />
-            </View>
+            </SafeAreaView>
         )
     }
 }

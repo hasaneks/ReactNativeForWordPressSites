@@ -8,13 +8,16 @@ export default {
     //Search Result Category Components 
     searchCategoryBackground :'#1D7BF6',
     searchCategoryTextColor :'#fff',
-    //Detail Page Category Color
+    //Detail Page Category Colors
     detailCategoryBackground : '#1D7BF6',
     detailCategoryTextColor : '#fff',
-    //Detail Page Author Color
+    //Detail Page Author Colors
     detailAuthorBackground:'transparent',
     detailAuthorTextColor :'#000',
-    //Category View Box Color
+    //Detail Page Comment Colors
+    detailCommentBackground:'#1D7BF6',
+    detailCommentTextColor :'#fff',
+    //Category View Box Colors
     categoryBoxBackground :'#fff',
     categoryBoxTextColor :'#000',
 }

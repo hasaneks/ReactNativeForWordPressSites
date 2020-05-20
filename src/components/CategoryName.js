@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 import axios from 'axios';
 import config from './../config/index';
 import { observer, inject } from 'mobx-react';
@@ -28,11 +28,16 @@ export default class CategoryName extends Component {
         }
     }
 
+    changeData = () => {
+        const {CategoryStore} = this.props;
+        CategoryStore.getCategoryPosts(this.props.categoryId);
+    }
+
     render() {
         return (
-            <View style={[styles.categoryArea, { height: this.props.height, marginBottom: this.props.marginBottom, backgroundColor: this.props.backgroundColor }]}>
+            <TouchableOpacity style={[styles.categoryArea, { height: this.props.height, marginBottom: this.props.marginBottom, backgroundColor: this.props.backgroundColor }]} onPress={this.changeData}>
                 <Text style={[styles.listCategory, { color: this.props.color }]}> {this.state.categoryName} </Text>
-            </View>
+            </TouchableOpacity>
         )
     }
 }

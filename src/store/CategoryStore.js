@@ -1,4 +1,4 @@
-import { observable, action, configure, runInAction, computed } from 'mobx';
+import { observable, action, configure, runInAction } from 'mobx';
 import config from '../config/index';
 import axios from 'axios';
 
@@ -22,7 +22,7 @@ class CategoryStore {
                 this.isLoading = true;
             })
         } catch (error) {
-            console.log("getPostData Error Message : " + error);
+            console.log("getCategoryList Error Message : " + error);
         }
     }
 

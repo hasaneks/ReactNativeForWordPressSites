@@ -4,7 +4,8 @@ import { View, StyleSheet, Image } from 'react-native';
 import axios from 'axios';
 //
 import config from '../config/index';
-class ListImage extends Component {
+
+export default class ListImage extends Component {
   state = {
     imageUrl: '',
   };
@@ -47,4 +48,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListImage;
