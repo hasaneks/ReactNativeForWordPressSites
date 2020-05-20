@@ -18,16 +18,23 @@ class PostListStore {
     @observable isLoading = false;
 
     /* getPostData Function is domain.com/wp-json/wp/posts get data and data parse for slider and grid list */
-    @action async getPostData(page, requestType) {
+    @action async getPostData(page, requestPage, requestType) {
         console.log("getPostData Çalıştı");
+        if (requestType === 'refresh')
+        {
+            this.postData = [];
+            this.sliderData = [];
+            itemNumber = 0;
+        }
+
         try {
             const { data } = await axios.get(config.url + `wp-json/wp/v2/posts?page=${page}`);
             runInAction(() => {
                 this.setData = [...this.setData, ...data];
-                if (this.isFirstLoading == true){
+                if (this.isFirstLoading == true || requestType== 'refresh') {
                     this.dataParser(this.setData)
                 }
-                else{
+                else {
                     this.postData = [...this.postData, ...data];
                 }
                 this.isLoading = true;

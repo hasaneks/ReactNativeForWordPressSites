@@ -1,6 +1,6 @@
 
 import {
-  Dimensions
+    Dimensions
 } from 'react-native';
 
 const width = Dimensions.get('screen').width;
@@ -76,74 +76,5 @@ export default {
         width: 32,
         marginBottom: 15,
     },
-    //Grid Style - 1
-    listItemAreas: {
-        margin: 10,
-        marginBottom: 20,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        flex: 1,
-    },
-    listTextArea: {
-        padding: 15,
-    },
-    listTitle: {
-        fontSize: 20,
-        fontWeight: "bold",
-        marginBottom: 10,
-    },
-    //Grid Style -2 
-    listItemAreas2: {
-        margin: 15,
-        flex: 1,
-        flexDirection: 'row',
-        backgroundColor: 'transparent',
-    },
-    listTextArea2: {
-        paddingHorizontal: 10,
-        marginHorizontal: 5,
-        flex: 1,
-    },
-    listTitle2: {
-        fontSize: 15,
-        fontWeight: '700',
-        lineHeight: 25,
-    },
-    //Grid Style - 3
-    listItemAreas3: {
-        margin: 10,
-        flex: 1,
-        flexDirection: 'row',
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        overflow: "hidden"
-    },
-    listTextArea3: {
-        paddingHorizontal: 5,
-        paddingVertical: 15,
-        marginHorizontal: 5,
-        flex: 1,
-    },
-    listTitle3: {
-        fontSize: 15,
-        fontWeight: '700',
-        lineHeight: 25,
-    },
-    //Grid Style - 4
-    listItemAreas4: {
-        margin: 10,
-        // marginBottom: 10,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        flex: 1,
-        flexDirection: 'column'
-    },
-    listTextArea4: {
-        padding: 15,
-    },
-    listTitle4: {
-        fontSize: 20,
-        fontWeight: "bold",
-        marginBottom: 10,
-    },
+
 }

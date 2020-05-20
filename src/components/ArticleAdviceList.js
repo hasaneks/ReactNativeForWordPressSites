@@ -35,7 +35,6 @@ export default class ArticleAdviceList extends Component {
     };
 
     getPostList = async () => {
-
         try {
             const { data } = await axios.get(config.url + `wp-json/wp/v2/posts?offset=3&exclude=${this.props.postId}`);
             this.setState({
@@ -45,7 +44,6 @@ export default class ArticleAdviceList extends Component {
         } catch (error) {
             console.log("Article Advice List in getPostList Function Error : " + error)
         }
-        console.log("Data Yüklendi : " + data)
     };
 
     refreshData = (data) => {
@@ -53,7 +51,7 @@ export default class ArticleAdviceList extends Component {
     };
 
     renderItem = (item, index) => {
-        const {TextStore} = this.props;
+        const { TextStore } = this.props;
         return (
             <TouchableOpacity style={styles.itemArea} onPress={() => this.refreshData(item)}>
                 <ListImage mediaId={item.item.featured_media} width={'100%'} imageHeight={175} />

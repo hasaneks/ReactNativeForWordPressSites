@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Text, View, SafeAreaView, StyleSheet, TouchableOpacity, TextInput, FlatList, ActivityIndicator, Image, Dimensions } from 'react-native'
+import { Text, View, SafeAreaView, StyleSheet, TextInput, FlatList, ActivityIndicator, Image, Dimensions } from 'react-native'
 //Components
-import ListImage from '../../components/ListImage'
-import CategoryName from '../../components/CategoryName'
+import {LeftImageCard} from '../../components/index'
 //Mobx
 import { observer, inject } from 'mobx-react'
 import { action } from 'mobx'
@@ -55,17 +54,8 @@ export class Search extends Component {
     };
 
     renderSearchItem = (item, index) => {
-        const { TextStore } = this.props;
         return (
-            <TouchableOpacity key={index} style={styles.searchItem} onPress={() => this.goToDetail(item)}>
-                <View>
-                    <ListImage mediaId={item.item.featured_media} imageHeight={75} imageWidth={75} borderRadius={10} />
-                </View>
-                <View style={styles.listTextArea}>
-                    <CategoryName categoryId={item.item.categories[0]} height={20} marginBottom={10} backgroundColor={color.searchCategoryBackground} color={color.searchCategoryTextColor} />
-                    <Text style={styles.listTitle} numberOfLines={2}>{TextStore.clearText(item.item.title.rendered)}</Text>
-                </View>
-            </TouchableOpacity>
+            <LeftImageCard key={index} item={item} onPress={() => this.goToDetail(item)} />
         )
     };
 

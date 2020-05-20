@@ -17,7 +17,6 @@ export default class Author extends Component {
     }
 
     getAuthorInformation = async (authorId) => {
-
         try {
             const { data } = await axios.get(config.url + `/wp-json/wp/v2/users/${authorId}`);
             this.setState({
@@ -56,7 +55,6 @@ const styles = StyleSheet.create({
         borderWidth:2,
         borderColor:'#fff',
         marginLeft:-1, 
-
     },
     authorName: {
         color: '#fff',
